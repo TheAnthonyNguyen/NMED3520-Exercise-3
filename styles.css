@@ -1,0 +1,118 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7c7c, #f8a5a5, #ffcc70); /* Gradient Background */
+    color: #333;
+    overflow: hidden;
+}
+
+/* Container for content */
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-10px);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Character Text */
+#character {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.button {
+    padding: 18px 36px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4e50, #ff6d00);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+/* Hover Effects for Buttons */
+.button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(45deg, #ff6d00, #ff4e50);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Focus Effect */
+.button:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+/* State Text Styles */
+.idle {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.excited {
+    color: #ff8c00;
+    font-size: 3rem;
+    transform: scale(1.2);
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.curious {
+    color: #6a5acd;
+    font-size: 2.8rem;
+    transform: rotate(5deg) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.sad {
+    color: #708090;
+    font-size: 2rem;
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.angry {
+    color: #d32f2f;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
